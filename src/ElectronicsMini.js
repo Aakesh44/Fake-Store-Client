@@ -1,13 +1,13 @@
-import React, { useContext, useEffect } from 'react'
+import React, { useContext } from 'react'
 import electronic1 from "./images/electronic1.webp"
-import load2 from './images/load2.avif'
+// import load2 from './images/load2.avif'
 import load from "./images/load.png"
 import { Link } from 'react-router-dom'
 import DataContext from './context/DataContext'
-import api from "./api/products"
+// import api from "./api/products"
 
 const ElectronicsMini = () => {
-    const {handleCategory,dataElec}=useContext(DataContext)
+    const {dataElec}=useContext(DataContext)
 
     const Data=dataElec.filter(n=>n.category==="electronics").slice(0,4)
 
@@ -39,7 +39,7 @@ const ElectronicsMini = () => {
         </>:
         <>
             <div className=' h-5/6 w-5/6 lg:w-1/3 shadow-md rounded-md bg-red-00 flex-shrink-0 mx-4'>
-                <img src={load} alt="" srcset="" />
+                <img src={load} alt=""  />
                 <h1 className=' text-gray-300'>Loading</h1>
             </div>
         </>}

@@ -1,11 +1,11 @@
 import React, { useContext } from 'react'
 import DataContext from './context/DataContext'
 import { Link } from 'react-router-dom'
-import load from "./images/load.png" 
+// import load from "./images/load.png" 
 import {  AiFillStar,AiOutlineHeart } from "react-icons/ai";
 
 const ElectronicsMain = () => {
-  const {data,dataElec,likeProduct}=useContext(DataContext)
+  const {dataElec,likeProduct}=useContext(DataContext)
   const Data=dataElec.filter(n=>n.category==="electronics")
   return (
     <main className=' border-2 border-fuchsia-700 flex flex-col mt-10 mb-20'>

@@ -1,12 +1,12 @@
 import React, { useContext } from 'react'
 import { useParams,Link } from 'react-router-dom';
-import load from "./images/load.png"
+// import load from "./images/load.png"
 import DataContext from './context/DataContext';
 import {  AiFillStar,AiOutlineHeart } from "react-icons/ai";
 
 const SpecialProduct = () => {
-    const {dataElec,cartItems,addToCart,likeProduct,buyProduct}=useContext(DataContext)
-    const Data=dataElec.filter(n=>n.category==="electronics")
+    const {dataElec,addToCart,likeProduct,buyProduct}=useContext(DataContext)
+    // const Data=dataElec.filter(n=>n.category==="electronics")
 
     const {id}=useParams();
     const post=dataElec.find(n=>(n.id).toString()===id);

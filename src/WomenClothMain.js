@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import DataContext from './context/DataContext'
 import { Link } from 'react-router-dom'
-import load from "./images/load.png" 
+// import load from "./images/load.png" 
 import {  AiFillStar,AiOutlineHeart } from "react-icons/ai";
 
 const WomenClothMain = () => {
@@ -12,7 +12,7 @@ const WomenClothMain = () => {
 
     <main className=' border-2 border-fuchsia-700 flex flex-col mt-10 mb-20'>
         <section className=' border-b-2 py-16'>
-        <h1 className=' text-center  md:text-2xl'>Best of women's clothing</h1>
+        <h1 className=' text-center  md:text-2xl'>Best of womens clothing</h1>
         {Data ? <p className=' text-center  md:text-xl'>{Data.length} products</p>:<p className=' text-center  md:text-xl'>no results</p>}
         
         </section>

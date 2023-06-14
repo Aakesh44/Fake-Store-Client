@@ -1,5 +1,5 @@
 import React, { useContext } from 'react'
-import { useState } from 'react';
+// import { useState } from 'react';
 import DataContext from './context/DataContext';
 
 const Login = () => {
@@ -8,7 +8,7 @@ const Login = () => {
     boxShadow: '15px 15px 30px #bebebe, -15px -15px 30px #ffffff'
   };
   
-  const {name,email,handleChangeEmail,handleChangeName,handleSubmit,submitted}=useContext(DataContext)
+  const {name,handleChangeEmail,handleChangeName,handleSubmit,submitted}=useContext(DataContext)
 
 
 

@@ -1,16 +1,17 @@
+import React from 'react';
 import './App.css';
 import Header from "./Header"
-import Showbar from './Showbar';
-import Ad from './Ad';
-import ElectronicsMini from './ElectronicsMini';
-import JewelsMini from './JewelsMini';
-import MenClothMini from './MenClothMini';
-import WomenClothMini from './WomenClothMini';
+// import Showbar from './Showbar';
+// import Ad from './Ad';
+// import ElectronicsMini from './ElectronicsMini';
+// import JewelsMini from './JewelsMini';
+// import MenClothMini from './MenClothMini';
+// import WomenClothMini from './WomenClothMini';
 import ElectronicsMain from "./ElectronicsMain"
 import JewelsMain from "./JewelsMain"
 import MenClothMain from "./MenClothmain"
 import WomenClothMain from "./WomenClothMain"
-import Info from './Info';
+// import Info from './Info';
 import Navmenu from "./Navmenu"
 import Footer from './Footer';
 import Login from "./Login"
@@ -20,7 +21,7 @@ import Me from './Me';
 import Sold from "./Sold"
 import Like from './Like';
 import MyCart from "./MyCart"
-import { Route, Router, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import Missing from './Missing';
 import Home from './Home';
 import { DataProvider } from './context/DataContext';

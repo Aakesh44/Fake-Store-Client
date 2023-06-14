@@ -1,13 +1,13 @@
 import React, { useContext } from 'react'
 import load from "./images/load.png"
 import { Link } from 'react-router-dom'
-import jewel2 from "../src/images/jewel2.jpg"
+// import jewel2 from "../src/images/jewel2.jpg"
 import mencloth1 from "../src/images/mencloth1.webp"
 import DataContext from './context/DataContext'
 
 
 const MenClothMini = () => {
-    const {handleCategory,dataElec}=useContext(DataContext)
+    const {dataElec}=useContext(DataContext)
     const Data=dataElec.filter(n=>n.category==="men's clothing").slice(0,4)
   return (
     <main className="h-48 md:h-72 lg:h-96 md:mb-14 mb-12 bg-gray-5000 shadow-sm flex  items-center border-blue-950 border-1 p-1">
@@ -35,7 +35,7 @@ const MenClothMini = () => {
         </>:
         <>
             <div className=' h-5/6 w-5/6 lg:w-1/3 shadow-md rounded-md bg-red-00 flex-shrink-0 mx-4'>
-                <img src={load} alt="" srcset="" />
+                <img src={load} alt="" />
                 <h1 className=' text-gray-300'>Loading</h1>
             </div>
         </>}

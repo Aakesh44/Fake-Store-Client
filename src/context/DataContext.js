@@ -1,136 +1,112 @@
-import React from 'react'
-import { children } from 'react'
-import { createContext,useEffect,useState } from 'react'
-import api from "../api/products"
+import React from 'react';
+// import { children } from 'react'
+import { createContext,useEffect,useState } from 'react';
+import api from '../api/products';
+// import PropTypes from 'prop-types';
 
-const DataContext=createContext({})
+const DataContext=createContext({});
 
-export const DataProvider=({children})=>{
+export const DataProvider = ({children}) =>{
+ 
 
-    const placeholder="Search items";
+//   const [data, setData] = useState([]);
+  const [dataElec, setDataElec] = useState([]);
+//   const [category, setCategory] = useState('');
+  const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [submitted, setSubmitted] = useState(false);
+  const [cartItems, setCartItems] = useState([]);
+  const [like, setLike] = useState([]);
+  const [buy, setBuy] = useState([]);
 
-    // console.log("hii");
+  const addToCart = (n) => {
+    const productIndex = cartItems.findIndex((item) => item.id === n.id);
 
-    const [data,setData]=useState([])
-    // console.log('usestate data:',data);
-    const [dataElec,SetDataElec]=useState([])
-
-    const [category,SetCategory]=useState('')
-    
-    // const handleCategory=(n)=>{
-    //     SetCategory(n)
-        
-    // }
-    const [name, setName] = useState(' ');
-    const [email, setEmail] = useState('');
-    // const [errors, setErrors] = useState({});
-    const [submitted, setSubmitted] = useState(false);
-    // console.log(children,setData,category);
-
-    useEffect(()=>{
-
-    },[submitted])
-  
-    const handleSubmit=(e)=>{
-        e.preventDefault();
-    //   console.log(name);
-    //   console.log(email);
-
-      setSubmitted(true)
-    //   console.log(submitted);
+    if (productIndex !== -1) {
+      const updatedCartItems = [...cartItems];
+      setCartItems(updatedCartItems);
+    } else {
+      setCartItems([...cartItems, n]);
     }
-    const handleChangeEmail=(e)=>{
-      setEmail(e)
+  };
+
+  const likeProduct = (n) => {
+    const productIndex = like.findIndex((item) => item.id === n.id);
+
+    if (productIndex !== -1) {
+      const updated = [...like];
+      setLike(updated);
+    } else {
+      setLike([...like, n]);
     }
-    const handleChangeName=(e)=>{
-      setName(e)
+  };
+
+  const buyProduct = (n) => {
+    const productIndex = buy.findIndex((item) => item.id === n.id);
+
+    if (productIndex !== -1) {
+      const updated = [...buy];
+      setBuy(updated);
+    } else {
+      setBuy([...buy, n]);
     }
-    
+  };
 
-    const [cartItems,setCartItems]=useState([])
-    const addToCart=(n=>{
-        const productIndex=cartItems.findIndex(item=>item.id===n.id)
-
-        if (productIndex !==-1) {
-            const updatedCartItems = [...cartItems];
-            // updatedCartItems[productIndex].quantity += 1;
-            setCartItems(updatedCartItems);
-        } else {
-            setCartItems([...cartItems,n]);
-            // setCartItems([...cartItems, { name: n.name, quantity: 1 }]);
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await api.get();
+        setDataElec(response.data);
+      } catch (err) {
+        if (err.response) {
+          console.log(err.response.data);
         }
-  
-    })
+      }
+    };
+    fetchPosts();
+  }, []);
 
-    const [like,setLike]=useState([])
-    const likeProduct=(n=>{
-        const productIndex=like.findIndex(item=>item.id===n.id)
+  const handleChangeEmail = (e) => {
+    setEmail(e);
+  };
 
-        if(productIndex !== -1){
-            const updated=[...like]
-            setLike(updated)
-        }
-        else{setLike([...like,n])}
-    })
+  const handleChangeName = (e) => {
+    setName(e);
+  };
 
-    const [buy,setBuy]=useState([])
-    const buyProduct=(n=>{
-        const productIndex=buy.findIndex(item=>item.id===n.id)
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setSubmitted(true);
+  };
 
-        if(productIndex !== -1){
-            const updated=[...buy]
-            setBuy(updated)
-        }
-        else{setBuy([...buy,n])}
-    })
+  return (
+    <DataContext.Provider
+      value={{
 
-    useEffect(()=>{
-
-        const fetchPosts=async()=>{
-            try{
-                const response=await api.get()
-                SetDataElec(response.data)
-                // console.log ( 'response dataelec :',response.data);
-            }
-            catch(err){
-                if(err.response){
-                    console.log(err.response.data);
-                }
-            }
-        }
-        fetchPosts();
-    },[])
-
-    // useEffect(()=>{
-
-    //     const fetchPosts=async()=>{
-    //         try{
-    //             const response=await api.get(`/category/${category}`)
-    //             setData(response.data)
-    //             console.log ( 'response data :',response.data);
-    //         }
-    //         catch(err){
-    //             if(err.response){
-    //                 console.log(err.response.data);
-    //             }
-    //         }
-    //     }
-    //     fetchPosts();
-    // },[category])
-
-
-
-    return (
-    <DataContext.Provider value={{
-            placeholder,data,SetCategory,dataElec,
-            name,email,handleChangeEmail,handleChangeName,handleSubmit,submitted,
-            cartItems,addToCart,
-            like,likeProduct,
-            buy,buyProduct
-    }}>
-            {children}
+        // data,
+        // setCategory,
+        dataElec,
+        name,
+        email,
+        handleChangeEmail,
+        handleChangeName,
+        handleSubmit,
+        submitted,
+        cartItems,
+        addToCart,
+        like,
+        likeProduct,
+        buy,
+        buyProduct,
+      }}
+    >
+      {children}
     </DataContext.Provider>
-    )
-}
+  );
+};
 
+
+// DataProvider.propTypes = {
+//     children: PropTypes.node.isRequired,
+//   };
 export default DataContext

@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 // import { useState,useContext } from 'react'
 // import DataContext from './context/DataContext';
 
@@ -51,19 +51,19 @@ const About = () => {
 
       <div className=' mt-5 flex flex-col gap-4'>
         <h1 className=' text-xl font-semibold'>Features and Benefits:</h1>
-        <p className=' ml-3'>At Fake Store, you'll find an extensive range of products across various categories. Enjoy the convenience of secure online payments, fast shipping, and a hassle-free return policy. We also provide detailed product descriptions and customer reviews to help you make informed purchasing decisions.</p>
+        <p className=' ml-3'>At Fake Store, youll find an extensive range of products across various categories. Enjoy the convenience of secure online payments, fast shipping, and a hassle-free return policy. We also provide detailed product descriptions and customer reviews to help you make informed purchasing decisions.</p>
       </div>
 
       <div className=' mt-5 flex flex-col gap-4'>
         <h1 className=' text-xl font-semibold'>Testimonials:</h1>
-        <p className=' ml-3'>Don't just take our word for it. Here's what our customers have to say about their experience with Fake Store:<br></br>
-          - 'I love shopping at Fake Store. The product quality is excellent, and the prices are unbeatable.' - Sarah<br></br>
-          - 'The customer support team at Fake Store is exceptional. They promptly resolved my queries and ensured I had a smooth shopping experience.' - John</p>
+        <p className=' ml-3'>Dont just take our word for it. Heres what our customers have to say about their experience with Fake Store:<br></br>
+          - I love shopping at Fake Store. The product quality is excellent, and the prices are unbeatable. - Sarah<br></br>
+          - The customer support team at Fake Store is exceptional. They promptly resolved my queries and ensured I had a smooth shopping experience. - John</p>
       </div>
 
       <div className=' mt-5 flex flex-col gap-4'>
         <h1 className=' text-xl font-semibold'>Contact Information:</h1>
-        <p className=' ml-3'>We're here to assist you! If you have any questions, concerns, or feedback, please don't hesitate to reach out to us. You can contact us via email at [email protected] or call our customer support hotline at XXX-XXXX-XXXX.</p>
+        <p className=' ml-3'>Were here to assist you! If you have any questions, concerns, or feedback, please dont hesitate to reach out to us. You can contact us via email at [email protected] or call our customer support hotline at XXX-XXXX-XXXX.</p>
       </div>
 
       <div className=' mt-5 flex flex-col gap-4'>
@@ -83,7 +83,7 @@ const About = () => {
 
       <div className=' mt-5 flex flex-col gap-4'>
         <h1 className=' text-xl font-semibold'>FAQ:</h1>
-        <p className=' ml-3'>Have questions about shopping at Fake Store? Check out our FAQ section for answers to commonly asked questions. If you can't find what you're looking for, feel free to reach out to our customer support team.</p>
+        <p className=' ml-3'>Have questions about shopping at Fake Store? Check out our FAQ section for answers to commonly asked questions. If you cant find what youre looking for, feel free to reach out to our customer support team.</p>
       </div>
 
     </section>

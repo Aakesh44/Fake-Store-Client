@@ -1,7 +1,7 @@
 import React, { useContext } from 'react'
 import DataContext from './context/DataContext'
 import { Link } from 'react-router-dom'
-import load from "./images/load.png" 
+// import load from "./images/load.png" 
 import {  AiFillStar,AiOutlineHeart } from "react-icons/ai";
 
 const JewelsMain = () => {
