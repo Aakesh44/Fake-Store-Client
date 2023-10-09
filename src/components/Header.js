@@ -67,15 +67,11 @@ const Header = () => {
                 <ul className=' absolute mt-24 lg:px-10 md:px-10 z-10 headerm shadow-md px-5 py-6 xl:w-96 border-2'>
                     {filteredProducts.map(n=>(
 
-                        <Link 
-                        to={`Productpage/${n.id}`} 
-                        key={n.id} 
-                        className=' truncate mb-2 hover:bg-fuchsia-900 hover:text-white font-semibold' 
-                        onClick={resetDropdown}>
-                           
+                        <li key={n.id} className=' truncate mb-2 hover:bg-fuchsia-900 hover:text-white font-semibold' onClick={resetDropdown}>
+                            <Link  to={`Productpage/${n.id}`} className='w-full'>
                                 {n.title}
-                                
-                        </Link>
+                            </Link>
+                        </li>
                         
                     ))}
                 </ul>
