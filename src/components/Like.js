@@ -23,15 +23,11 @@ const Like = () => {
     }
   return (
     <div>
-      {like.length === 0 ? 
-      <>
-       <h1 className=' text-3xl text-center py-44'>  Empty</h1>
-      </>:
+      {like.length === 0 ? <h1 className=' text-3xl text-center py-44'>  Empty</h1>:
           <>
           <section   className=' flex flex-wrap border-2 flex-row items-center justify-center p-5 gap-2 '>
           {like.map(n=> 
           
-  
           <section key={n.id} className='Card relative rounded-lg w-2/5 h-3/4 lg:h-auto lg:w-1/4 xl:w-1/5 p-3'>
 
           {checkLike(n._id) ? 
@@ -58,10 +54,11 @@ const Like = () => {
                 </Link>
             </div>
           </div>
-        </section>
-        )}
-        </section>
-            </>
+          </section>
+
+          )}
+          </section>
+          </>
       }
     </div>
   )

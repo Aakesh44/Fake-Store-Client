@@ -20,7 +20,7 @@ const Confirm = ({setdone}) => {
               }
           }
     
-          const response = await axios.post(
+          await axios.post(
               "https://fake-store-server.vercel.app/orderPlace",
               {
                 userId:mainUser?._id,
@@ -43,8 +43,8 @@ const Confirm = ({setdone}) => {
       }
       }
 
-    console.log(memoizedBuyProduct.buyProduct);
-    console.log(buyProduct);
+    // console.log(memoizedBuyProduct.buyProduct);
+    // console.log(buyProduct);
     const product = dataElec.find(n=> n._id === memoizedBuyProduct.buyProduct.productId)
 
   return (
