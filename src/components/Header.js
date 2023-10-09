@@ -1,6 +1,5 @@
 import React, { useContext, useState } from 'react'
 import { FiMenu } from "react-icons/fi";
-// import { RiShoppingBag3Fill } from "react-icons/ri";
 import {BsPerson,BsHeart,BsHandbagFill} from  "react-icons/bs";
 import { Link } from 'react-router-dom';
 import  DataContext  from '../context/DataContext';
@@ -42,10 +41,8 @@ const Header = () => {
             }
         </div>
         <Link to="/">
-            {/* <div className='Secclr my-auto  text-white p-1 rounded-sm cursor-pointer md:ml-5 md:h-10 md:w-10 md:flex md:items-center md:justify-center lg:h-14 lg:w-14 lg:rounded-md md:mx-8'> */}
-                 {/* <BsBalloonHeartFill className='md:h-6 md:w-6 '/> */}
+            
                 <img src={store} alt="" className='h-6 w-6 md:h-8 md:w-8 lg:h-10 lg:w-10'  />
-            {/* </div> */}
         </Link>
 
 
@@ -64,7 +61,7 @@ const Header = () => {
                 placeholder={"search items"}
                 value={search}
                 onChange={(e)=>searchfun(e.target.value)}
-                className=' placeholder:text-lg placeholder:text-center rounded h-6 my-auto lg:h-10 md:h-9 lg:border-2 lg:border-fuchsia-900 lg:w-11/12 xl:w-96 px-5'/>
+                className=' placeholder:text-lg placeholder:text-center rounded h-6 my-auto lg:h-10 md:h-9 border-2 border-fuchsia-900 lg:w-11/12 xl:w-96 px-5'/>
             
             {search.length>0 && filteredProducts.length>0 && (
                 <ul className=' absolute mt-24 lg:px-10 md:px-10 z-10 headerm shadow-md px-5 py-6 xl:w-96 border-2'>

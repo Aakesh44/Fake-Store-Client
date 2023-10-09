@@ -1,18 +1,12 @@
-// import { useEffect } from "react"
 import React from 'react'
-// import AOS from 'aos';
-// import aban from "../src/images/aban.jpg";
+
 import { AiOutlineShoppingCart ,AiOutlineLayout} from "react-icons/ai";
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink} from 'react-scroll';
 
 
 const Landing = () => {
-    // useEffect(() => {
-    //     AOS.init({
-    //       once: true, // Set once option to true
-    //     });
-    //   }, []);
+
   return (
     <main className='landbgd select-none bg-red-4000  md:pb-24  h-screen mx-auto w-11/12 sm:w-3/4 lg:w-full flex flex-col lg:flex-row '>
 

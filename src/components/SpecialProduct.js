@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import { useContext } from 'react'
 import { useParams,Link,useNavigate } from 'react-router-dom';
-// import load from "./images/load.png"
 import  DataContext  from '../context/DataContext';
 import {  AiFillStar,AiFillPlusSquare,AiFillMinusSquare,AiOutlineHeart,AiFillHeart ,AiOutlineShoppingCart} from "react-icons/ai";
 import { BsBagCheck } from "react-icons/bs";
@@ -16,13 +15,6 @@ const SpecialProduct = () => {
     const [count,setCount]=useState(1)
 
 
-    // const handleProductClick=(pid)=>{
-    //     navigate(`/Productpage/${pid}`)
-    //     setCount(1)
-    // };
-    // const Data=dataElec.filter(n=>n.category===post.category)
-    // const otherData=Data.filter(n=>n.id !==post.id)
-
     function handleLike(productId) {
         if(!mainUser?.likedProducts.includes(post._id)){
           likeProduct(productId)
@@ -32,7 +24,6 @@ const SpecialProduct = () => {
         }
       
       }
-    //   console.log(mainUser?.likedProducts.includes(post._id));
   
     function handleCart(productId) {
         if(!mainUser?.cartProducts.includes(post._id)){
@@ -45,9 +36,7 @@ const SpecialProduct = () => {
       }
 
     async function handleBuyProduct(){
-        // buyProduct.productId = post._id,
-        // buyProduct.counts = count
-        // buyProduct.price = (post.price)*count.toFixed(0)
+
         if (mainUser) {
             
             await memoizedBuyProduct.setBuyProduct({
@@ -57,7 +46,7 @@ const SpecialProduct = () => {
             })
             navigate('/Sold')
             
-            console.log(memoizedBuyProduct.buyProduct);
+            // console.log(memoizedBuyProduct.buyProduct);
         }
 
       }

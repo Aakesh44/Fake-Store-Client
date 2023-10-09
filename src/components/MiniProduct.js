@@ -1,14 +1,10 @@
 import React, { useContext,useEffect,useState } from 'react'
-// import tvimg2 from "./images/tvimg2.png"
-// import ringimg2 from "./images/ringimg2.png"
-// import menimg2 from "./images/menimg2.png"
-// import womenimg2 from "./images/womenimg2.png"
+
 import loading from "../images/loading.png"
 import PropTypes from 'prop-types';
 
 import { Link } from 'react-router-dom'
 import  DataContext  from '../context/DataContext';
-// import { AiFillStar } from "react-icons/ai";
 
 const MiniProduct = ({categorys}) => {
     const {dataElec,setMainProduct}=useContext(DataContext)

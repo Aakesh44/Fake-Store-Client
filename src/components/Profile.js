@@ -7,7 +7,6 @@ import axios from "axios";
 const Profile = () => {
     const {mainUser,setMainUser}=useContext(DataContext)
 
-    // console.log(memoizedBuyProduct.buyProduct);
     const navigate = useNavigate()
 
     const handleLogOut =()=>{
@@ -48,7 +47,7 @@ const Profile = () => {
             config
         )
         setMainUser(response.data)
-        console.log('edited');
+        // console.log('edited');
         setMakeChanges(false)
     } 
     catch (err) {

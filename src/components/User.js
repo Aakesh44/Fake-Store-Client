@@ -9,7 +9,7 @@ const schema = yup.object().shape({
     card_name:yup.string().required('card_name required').min(12,'enter valid card nuber').max(12,'enter valid card number'),
     card_date:yup.string().required('card_date required'),
     card_number:yup.number().required('card_number required'),
-    card_cvv:yup.number().required('card_cvv required').min(4,'enter valid cvv nuber').max(4,'enter valid cvv number'),
+    card_cvv:yup.number().required('card_cvv required').min(3,'enter valid cvv nuber').max(3,'enter valid cvv number'),
 
 })
 const User = () => {
@@ -63,7 +63,8 @@ const User = () => {
   }
 
   return (
-    <div>
+    <div className=' relative'>
+        <h1 className=' absolute top-1 left-4 mb-3 font-mono'>-- Dont go back or reload the page --</h1>
 
         <section className="section_form w-full" onSubmit={handleOrder}>
           <h1 className=' text-lg font-semibold my-2 whitespace-nowrap'>Enter your card details for payment</h1>

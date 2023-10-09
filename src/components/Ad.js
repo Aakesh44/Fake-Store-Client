@@ -1,5 +1,4 @@
 import React,{useEffect} from 'react'
-// import logo from '../src/images/logo.svg'
 import adimg2 from '../images/adimg2.png'
 import AOS from 'aos';
 import 'aos/dist/aos.css';

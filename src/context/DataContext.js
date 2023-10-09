@@ -70,7 +70,7 @@ const linkData = [
     try {
       const response = await axios.get(`https://fake-store-server.vercel.app/user/${userid}`)
       setMainUser(response.data)
-      console.log(response.data);
+      // console.log(response.data);
     } catch (error) {
       console.log('err:',error);
     }
@@ -91,7 +91,7 @@ const linkData = [
       try {
         const response = await axios.get(`https://fake-store-server.vercel.app/fetchOrder/${userid}`)
         setOrders(response.data)
-        console.log(response.data);
+        // console.log(response.data);
       } catch (error) {
         console.log('err:',error);
       }
@@ -111,12 +111,12 @@ const linkData = [
           "https://fake-store-server.vercel.app/addToCart",
           {
             userId:mainUser._id,
-            productId:productId
+            productId:productId 
           },
           config
       )
       setMainUser(response.data.userProfile)
-      console.log('add to cart');
+      // console.log('add to cart');
       // handleGetUser()
   } 
   catch (err) {
@@ -141,7 +141,7 @@ const linkData = [
           config
       )
       setMainUser(response.data.userProfile)
-      console.log('remove from cart');
+      // console.log('remove from cart');
       // handleGetUser()
   } 
   catch (err) {
@@ -168,7 +168,7 @@ const linkData = [
       config
     )
     setMainUser(response.data.userProfile)
-    console.log('liked');
+    // console.log('liked');
     // handleGetUser()
     } 
     catch (err) {
@@ -193,7 +193,7 @@ const linkData = [
           config
       )
       setMainUser(response.data.userProfile)
-      console.log('disliked');
+      // console.log('disliked');
       // handleGetUser()
   } 
   catch (err) {
@@ -207,7 +207,7 @@ const linkData = [
       counts:null,
       price:null
     })
-console.log('kiki');
+// console.log('kiki');
 
   const memoizedBuyProduct = useMemo(()=>{
     return {buyProduct,setBuyProduct};

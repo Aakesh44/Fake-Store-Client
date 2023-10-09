@@ -1,5 +1,4 @@
 import React,{useEffect, useState} from 'react'
-// import order1 from "./images/order.jpg"
 import { Link } from 'react-router-dom'
 const Final = () => {
     const [show,setShow]=useState(true)

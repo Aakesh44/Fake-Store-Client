@@ -1,6 +1,4 @@
 import React, { useContext ,useState} from 'react'
-// import { useState } from 'react';
-// import { Link } from 'react-router-dom';
 import  DataContext  from '../context/DataContext';
 import {useForm} from 'react-hook-form'
 import * as yup from 'yup'
@@ -36,10 +34,6 @@ const Login = () => {
   const [phoneNumber, setPhoneNumber] = useState('');
   const [existError,setExistError] = useState(null)
 
-  // const [card_name, setcard_name] = useState('');
-  // const [card_number, setcard_number] = useState(''); 
-  // const [card_date, setcard_date] = useState('');
-  // const [card_cvv, setcard_cvv] = useState('');
 
 
   const {register,handleSubmit,formState:{errors}}=useForm({
@@ -72,7 +66,7 @@ const Login = () => {
         config
       )
 
-      console.log(response);
+      // console.log(response);
       localStorage.setItem('storeUser',JSON.stringify(response.data._id))
       handleUser()
 

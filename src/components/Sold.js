@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import DataContext from '../context/DataContext';
-// import Profile from './Profile';
 import User from './User';
 import Final from './Final';
 import { useContext } from 'react';
 import Confirm from './Confirm';
-// import Brought from './context/Brought';
-// import { Link } from 'react-router-dom';
+
 
 
 

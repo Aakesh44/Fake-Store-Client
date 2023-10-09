@@ -1,8 +1,4 @@
 import React,{useContext} from 'react'
-// import tvimg2 from "./images/tvimg2.png"
-// import ringimg2 from "../src/images/ringimg2.png"
-// import menimg2 from "../src/images/menimg2.png"
-// import womenimg2 from "../src/images/womenimg2.png"
 import { Link } from 'react-router-dom'
 import  DataContext  from '../context/DataContext';
 

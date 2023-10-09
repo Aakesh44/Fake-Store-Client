@@ -111,7 +111,7 @@ const Me = () => {
             
             <div className=' bg-white h-full  lg:h-72 xl:h-80 w-full rounded-xl'>
               <div className='w-full h-4/6 lg:h-4/6 bg-white rounded-t-xl flex items-center justify-center p-3 sm:p-10 '>
-                <img src={n.image} alt="" className=' aspect-square w-full h-full '/>
+                <img src={n.img} alt="" className=' aspect-square w-full h-full '/>
               </div>
 
               <div className='w-full h-2/6 lg:h-2/6 p-2 flex flex-col gap-2 justify-around'>
@@ -142,7 +142,7 @@ const Me = () => {
 
               <div className=' bg-white h-full  lg:h-72 xl:h-80 w-full rounded-xl'>
                 <div className='w-full h-4/6 lg:h-4/6 bg-white rounded-t-xl flex items-center justify-center p-3 md:p-5 xl:p-10'>
-                  <img src={n.image} alt="" className=' aspect-square lg:w-full lg:h-full '/>
+                  <img src={n.img} alt="" className=' aspect-square lg:w-full lg:h-full '/>
                 </div>
 
                 <div className='w-full h-2/6 lg:h-2/6 p-2 flex flex-col justify-around'>

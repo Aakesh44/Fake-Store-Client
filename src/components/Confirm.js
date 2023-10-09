@@ -31,10 +31,10 @@ const Confirm = ({setdone}) => {
               config
           )
           
-          console.log('edited');
+        //   console.log('edited');
           setLoading(false)
           // handleGetUser()
-          console.log(response.data);
+        //   console.log(response.data);
           setdone(true)
       } 
       catch (err) {
