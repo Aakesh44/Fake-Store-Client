@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 const Confirm = ({setdone}) => {
 
-    const {memoizedBuyProduct,dataElec,mainUser,buyProduct} = useContext(DataContext)
+    const {memoizedBuyProduct,dataElec,mainUser} = useContext(DataContext)
 
     const [loading,setLoading] = useState(false)
     
